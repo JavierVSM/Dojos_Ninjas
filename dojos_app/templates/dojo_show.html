@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Dojo</title>
+</head>
+<body>
+    {% for name in onedojo %}   
+    <h1>{{name.name}} Ninjas</h1>
+    {% endfor %}
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for dojo in spec_data %}    
+            <tr>
+                <td>{{dojo.first_name}}</td>
+                <td> {{dojo.last_name}} </td>
+                <td> {{dojo.age}} </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <form method="get" action="/">
+        <button type="submit">Home
+    </form>  
+</body>
+</html>
